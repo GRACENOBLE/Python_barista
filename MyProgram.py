@@ -4,29 +4,31 @@ print("\n\nHello " + name + ", welcome to the coffee shop, this is our menu\n1.C
 
 orders = int(input("How many orders would you like to make?\n"))#asking the number of orders.
 
+COFFEE = 8
+
+CAPPUCCINO = 9
+
+FRESCO = 10
+
+COKTAIL = 11
+
+menu = [ COFFEE , CAPPUCCINO , FRESCO , COKTAIL ]
+
 def one_order():#function that handles the case that the user makes one order.
-    one_order = int(input("\nWhat would you like to have? Please select one item.\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))
+    the_one_order = int(input("\nWhat would you like to have? Please select one item.\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))
 
     number = int (input("\nHow many of those will you take?\n"))
 
-    COFFEE = 8
-
-    CAPPUCCINO = 9
-
-    FRESCO = 10
-
-    COKTAIL = 11
-
-    if one_order == 1:
-        ctotal = COFFEE * number
+    if the_one_order == 1:
+        ctotal = menu[the_one_order - 1] * number#Using a list index corresponding to the user input to select a list item
         print("\nOkay " + str(name) + " your Coffe will be ready in about five minutes." + "\nThat'll be " + str(ctotal) + "$\n")
-    elif one_order == 2:
+    elif the_one_order == 2:
         cptotal = CAPPUCCINO * number
         print("\nOkay " + str(name) + " your Cappuccino will be ready in about five minutes." + "\nThat'll be " + str(cptotal) + "$\n")
-    elif one_order == 3:
+    elif the_one_order == 3:
         ftotal = FRESCO * number
         print("\nOkay " + str(name) + " your Fresco will be ready in about five minutes." + "\nThat'll be " + str(ftotal) + "$\n")
-    elif one_order == 4:
+    elif the_one_order == 4:
         cototal = COKTAIL * number
         print("\nOkay " + str(name) + " your Coktail will be ready in about five minutes." + "\nThat'll be " + str(cototal) + "$\n")
     else:
@@ -34,7 +36,14 @@ def one_order():#function that handles the case that the user makes one order.
     exit()
 
 def two_orders():#function that handles the case that the user makes 2 orders.
-    print("comming soon")
+    first_order = int(input("please select a first order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))
+
+    first_order_number = int(Input("How many of those would you like?"))
+
+    second_order = int(input("please select a second order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))
+    
+    second_order_number = int(Input("How many of those would you like?"))
+   
     exit()
 
 def three_orders():#function that handles the case that the user makes 3 orders.
