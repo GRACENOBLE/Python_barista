@@ -41,15 +41,17 @@ def one_order():#function that handles the case that the user makes one order.
     exit()
 
 def two_orders():#function that handles the case that the user makes 2 orders.
-    first_order = int(input("please select a first order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))
+    first_order = int(input("\nPlease select a first order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking first order
 
-    first_order_number = int(Input("How many of those would you like?"))
+    first_order_number = int(input("\nHow many of those would you like?\n"))#taking a certain number of first orders
 
-    second_order = int(input("please select a second order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))
+    second_order = int(input("\nPlease select a second order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking second order
     
-    second_order_number = int(Input("How many of those would you like?"))
-   
-    exit()
+    second_order_number = int(input("\nHow many of those would you like?\n"))#Taking a certain number of second orders
+
+    total_for_two = (menu[first_order - 1] * first_order_number) + (menu[second_order -1] *second_order_number)#doing the maths for the two orders made from the menu using the list
+
+    print("\nThat will cost you a total of " + str(total_for_two) +"$\n")#telling the user how much he/she is charged
 
 def three_orders():#function that handles the case that the user makes 3 orders.
     print("comming soon")
@@ -68,5 +70,5 @@ elif orders == 3:
 elif orders == 4:
     four_orders()
 else:
-    ptint("Sorry we can only accept a maximum of four orders at a time")
+    print("Sorry we can only accept a maximum of four orders at a time")
     exit()
