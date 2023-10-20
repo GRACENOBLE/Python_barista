@@ -54,11 +54,43 @@ def two_orders():#function that handles the case that the user makes 2 orders.
     print("\nThat will cost you a total of " + str(total_for_two) +"$\n")#telling the user how much he/she is charged
 
 def three_orders():#function that handles the case that the user makes 3 orders.
-    print("comming soon")
+    first_order = int(input("\nPlease select a first order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking first order
+
+    first_order_number = int(input("\nHow many of those would you like?\n"))#taking a certain number of first orders
+
+    second_order = int(input("\nPlease select a second order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking second order
+    
+    second_order_number = int(input("\nHow many of those would you like?\n"))#Taking a certain number of second orders
+
+    third_order = int(input("\nPlease select a third order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking third order
+    
+    third_order_number = int(input("\nHow many of those would you like?\n"))#Taking a certain number of third orders
+
+    total_for_three = (menu[first_order - 1] * first_order_number) + (menu[second_order -1] *second_order_number) + (menu[third_order - 1] * third_order_number)#doing the maths for the three orders made from the menu using the list
+
+    print("\nThat will cost you a total of " + str(total_for_three) +"$\n")#telling the user how much he/she is charged
     exit()
 
 def four_orders():#function that handles the case that the user makes 4 orders.
-    print("comming soon")
+    first_order = int(input("\nPlease select a first order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking first order
+
+    first_order_number = int(input("\nHow many of those would you like?\n"))#taking a certain number of first orders
+
+    second_order = int(input("\nPlease select a second order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking second order
+    
+    second_order_number = int(input("\nHow many of those would you like?\n"))#Taking a certain number of second orders
+
+    third_order = int(input("\nPlease select a third order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking third order
+    
+    third_order_number = int(input("\nHow many of those would you like?\n"))#Taking a certain number of third orders
+
+    fourth_order = int(input("\nPlease select a fourth order:\n1.Coffee-------8$\n2.Cappuccino---9$\n3.Fresco------10$\n4.Coktail-----11$\n"))#Taking fourth order
+    
+    fourth_order_number = int(input("\nHow many of those would you like?\n"))#Taking a certain number of fourth orders
+
+    total_for_four = (menu[first_order - 1] * first_order_number) + (menu[second_order -1] *second_order_number) + (menu[third_order - 1] * third_order_number) + (menu[fourth_order - 1] * fourth_order_number)#doing the maths for the three orders made from the menu using the list
+
+    print("\nThat will cost you a total of " + str(total_for_four) +"$\n")#telling the user how much he/she is charged
     exit()
 
 if orders == 1:#Calling respective functions basing on the number of orders made.
